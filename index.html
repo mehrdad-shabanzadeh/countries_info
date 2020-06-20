@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>hw11-Q4</title>
+	</head>
+	<body>
+		<div class="container">
+			<!-- header start -->
+			<div id="header-box">
+				<h1>Countries Information</h1>
+				<select name="country-list" id="country-list">
+					<option>Choose country</option>
+				</select>
+			</div>
+			<!-- header end -->
+
+			<!-- country-info-box start -->
+			<div id="country-info-box">
+				<h2 id="country-name">Country Name</h2>
+				<p class="p-left-top inline-block">Native Name:</p>
+				<span id="native-name"> ---</span><br />
+				<p class="p-left-top inline-block">Capital:</p>
+				<span id="capital"> ---</span><br />
+				<p class="p-left-top inline-block">Region:</p>
+				<span id="region"> ---</span><br />
+				<p class="p-left-top inline-block">Population:</p>
+				<span id="population"> ---</span><br />
+				<p class="p-left-top inline-block">Languages:</p>
+				<span id="languages"> ---</span><br />
+				<p class="p-left-top inline-block">Time Zone:</p>
+				<span id="timezones"> ---</span>
+			</div>
+			<!-- country-info-box end -->
+
+			<!-- calling-code-box start -->
+			<div id="calling-code-box">
+				<h3 id="calling-code">CALLING CODE</h3>
+				<p id="country-calling-code">---</p>
+			</div>
+			<!-- calling-code-box end -->
+
+			<!-- flag-box start -->
+			<div id="flag-box"></div>
+			<!-- flag-box end -->
+
+			<!-- weather-condition-box start -->
+			<div id="weather-condition-box">
+				<h3 id="capital-weather-report">CAPITAL WEATHER REPORT</h3>
+				<div class="weather-condition-box-icon">
+					<p id="weather-icon"></p>
+					<p id="weather-description"></p>
+				</div>
+				<div class="weather-condition-box-info">
+					<!-- <p class="p-left-top inline-block">Wind Speed:</p>
+					<span id="wind-speed"> ---</span>
+					<p class="p-left-top inline-block">Temperature:</p>
+					<span id="temperature"> ---</span><br />
+					<p class="p-left-top inline-block">Humidity:</p>
+					<span id="humidity"> ---</span>
+					<p class="p-left-top inline-block">Visibility:</p>
+					<span id="visibility"> ---</span> -->
+					<table>
+						<tr>
+							<td>
+								<p class="p-left-top inline-block">Wind Speed:</p>
+								<span id="wind-speed"> ---</span>
+							</td>
+							<td><div class="space"></div></td>
+							<td>
+								<p class="p-left-top inline-block">Temperature:</p>
+								<span id="temperature"> ---</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="p-left-top inline-block">Humidity:</p>
+								<span id="humidity"> ---</span>
+							</td>
+							<td><div class="space"></div></td>
+							<td>
+								<p class="p-left-top inline-block">Visibility:</p>
+								<span id="visibility"> ---</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!-- weather-condition-box end -->
+
+			<!-- google-map-box start -->
+			<div id="map"></div>
+			<!-- google-map-box end -->
+		</div>
+		<!-- <script>
+			function initMap() {
+				let map = new google.maps.Map(document.getElementById("map"), {
+					center: { lat: 32, lng: 53 },
+					zoom: 4,
+				});
+				let marker = new google.maps.Marker({
+					position: { lat: 32, lng: 53 },
+					map: map,
+				});
+			}
+		</script> -->
+		<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+		<script src="./main.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=<YOUR_API_KEY>&callback=initMap" async defer></script>
+	</body>
+</html>

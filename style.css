@@ -1,0 +1,127 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.container {
+	display: grid;
+	width: 100%;
+	height: 100vh;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: minmax(100px, 1fr) minmax(250px, 2.5fr) minmax(250px, 2.5fr);
+	grid-template-areas: "header header header" "country-info calling-code flag" "weather-condition google-map google-map";
+	grid-gap: 10px;
+	border: 10px solid white;
+}
+
+#header-box {
+	grid-area: header;
+	background-color: rgb(68, 68, 68);
+	/* border: 10px solid white; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#header-box h1 {
+	color: yellow;
+	margin: 0 0 10px 0;
+}
+
+#header-box select {
+	width: 50%;
+	margin: 0 0 10px 0;
+}
+
+#country-info-box {
+	grid-area: country-info;
+	background-color: rgb(85, 80, 80);
+	color: white;
+	/* border: 10px solid white; */
+}
+
+.font-color-white {
+	color: white;
+}
+
+.font-color-yellow {
+	color: yellow;
+}
+
+#country-info-box h2 {
+	padding: 15px 10px;
+}
+
+.p-left-top {
+	padding: 10px 0 0 10px;
+}
+
+.inline-block {
+	display: inline-block;
+}
+#calling-code-box {
+	grid-area: calling-code;
+	text-align: center;
+	background-color: yellow;
+}
+
+#calling-code-box h3 {
+	width: 100%;
+	background-color: rgb(68, 68, 68);
+	color: white;
+	padding: 20px;
+	font-size: 30px;
+}
+
+#calling-code-box p {
+	width: 100%;
+	display: table;
+	vertical-align: middle;
+	font-size: 120px;
+}
+
+#flag-box {
+	grid-area: flag;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: lightgray;
+}
+
+#flag-box img {
+	width: 100%;
+	max-height: 100%;
+}
+
+#weather-condition-box {
+	grid-area: weather-condition;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(218, 218, 218);
+}
+
+#weather-condition-box h3 {
+	width: 100%;
+	text-align: center;
+	color: yellow;
+	background-color: rgb(68, 68, 68);
+	padding: 20px;
+}
+
+#weather-description {
+	text-align: center;
+	color: orangered;
+}
+
+#map {
+	grid-area: google-map;
+	background-color: rgb(240, 240, 240);
+	/* border: 1px solid black; */
+}
+
+.space {
+	width: 50px;
+}
